@@ -1,9 +1,10 @@
-/* Basic Digital Read
-   This is the sketch used for the 'useless_box' project, which is dedicated towards the realization of a personal useless box.
-   modules:
-       - button: https://www.arduino.cc/en/Tutorial/DigitalInputPullup
-       - servo:
-*/
+
+
+// This is the sketch used for the 'useless_box' project.
+// Have a look at the project on GitHub: github.com/DanielBaur/useless_box
+// Modify the utilized pins under 'user definitions'.
+// Add your own animations under 'useless profiles'.
+
 
 
 
@@ -12,7 +13,22 @@
 // imports
 // --------------------------------------------------
 
+
 #include <Servo.h>
+
+
+
+
+
+// --------------------------------------------------
+// user definitions
+// --------------------------------------------------
+
+
+int switch_pin = 2; // digital pin for toggle switch, digital, no PWM required (uno default: 2, Arduino Nano default: D2, which is referenced by 2)
+int servo_lid_pin = 10; // PWM (Arduino UNO default: 10, Arduino Nano default: D10, which is referenced by 10)
+int servo_switch_pin = 9; // PWM (Arduino UNO default: 9, Arduino Nano default: D9, which is referenced by 9)
+int led_pin = 16; // choose the pin for the LED (Arduino Nano: 16)
 
 
 
@@ -24,21 +40,17 @@
 
 
 // general
-int switch_pin = 2; // choose the pin for the button signal
 int switch_val; // digital button signal (either HIGH or LOW)
-int led_pin = 13; // choose the pin for the LED
 
 
 // lid servo
 Servo servo_lid; // erstellt ein Servo-Objekt um einen Servomotor zu steuern
-int servo_lid_pin = 10;
 int servo_lid_startpos = 180;
 int servo_lid_endpos = 90;
 
 
 // switch servo
 Servo servo_switch; // erstellt ein Servo-Objekt um einen Servomotor zu steuern
-int servo_switch_pin = 9;
 int servo_switch_startpos = 180;
 int servo_switch_endpos = 0;
 
@@ -121,22 +133,22 @@ void setup() {
 
 void loop() {
 
+
   switch_val = digitalRead(switch_pin);  // read input value
+
 
   // switch closed ---> LED off
   if (switch_val == HIGH) {
     digitalWrite(led_pin, LOW);
   }
-
   // switch open ---> do useless stuff
   else {
     int random_useless_action = random(1,100);
     Serial.print(random_useless_action);
-
     // animation
     if (random_useless_action == 1) {
-      Serial.print("randac: ");
-      Serial.print(random_useless_action);
+      //Serial.print("randac: ");
+      //Serial.print(random_useless_action);
       digitalWrite(led_pin, HIGH);
       useless_action_1_standard();
     }
