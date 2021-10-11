@@ -125,7 +125,7 @@ The following steps will guide you through the assembly of the useless box proje
 <br>
 
 
-#### 3D-Printing the Box and Levers
+#### 3.1 Preparing the Box
 
 
 <br>
@@ -138,25 +138,36 @@ Therefore insert a PLA string (diameter: 1.75 mm) into the foreseen perforations
 
 
 <br>
+
+
+Insert the servo motors into the foreseen perforations and fixate them with cable ties.
+
+
 <br>
 
 
-#### Positioning the Arduino Board and Grounding
-
+Also insert both the toggle switch and the three-state power switch into their foreseen perforations.
+Solder female jumper wires to their pins.
 
 <br>
 
 
-Place the Arduino Nano board onto the small breadboard like depicted below.
-Connect its `GND` pin to the lowermost row of the breadboard.
+Install the Arduino Nano board onto the small breadboard with its USB port positioned in the topmost row, facing towards the foreseen perforation (like depicted below). Afterwards glue the breadboard in place.
+Connect the Arduino `GND` pin to the unoccupied lowermost row of the breadboard.
 All grounded components need to be connected to this common ground potential `GND`.
 
 
 <br>
+
+
+![3_1__box_view_crop.jpg](./images/3_1__box_view_crop.jpg)
+
+
+<br>
 <br>
 
 
-#### Installing the Servo Motors and Toggle Switch
+#### 3.2 Wiring the Servo Motors and Toggle Switch
 
 
 <br>
@@ -178,51 +189,57 @@ NOTE: The servo motors cannot be powered off the 5 V pin of the Arduino board du
 <br>
 
 
-Attach (do not yet screw) the small plastic levers that come with the servo motors to the exposed gears and insert the servos into the foreseen perforations of the bottom part of the 3D-printed box.
-WARNING: Do not yet attach the 3D-printed levers to the servo motors. (see the section below).
-
+Connect one pin of the toggle switch to the common ground `GND` and the other one to a digital pin on the Arduino board (here: `D2`).
 
 
 <br>
 
 
-Insert the toggle switch through the foreseen perforation in the front of the bottom part of the 3D-printed box.
-Connect the two wires the common ground `GND` and a digital pin on the Arduino board (here: `D2`), respectively.
+![3_2__close_up__crop.jpg](./images/3_2__close_up__crop.jpg)
 
 
 <br>
 <br>
 
 
-#### Software Setup
+#### 3.3 Software Setup and Lever Orientation
 
 
 <br>
 
 
-Now connect the Arduino Nano board to your computer via the foreseen hole in the back of the box.
-Open the `useless_box.ino` sketch in the Arduino IDE.
+Now connect the Arduino Nano board to your computer via USB and open the `useless_box.ino` sketch in the Arduino IDE.
 Eventually adapt the pin numbers for the toggle switch (`switch_pin`, here: `D2`), the servo moving the box lid (`servo_lid_pin`, here: `D10`), and the servo moving the toggle switch (`servo_switch_pin`, here: `D9`).
 Then upload the modified sketch to the Arduino Nano board to program the microcontroller.
-You should now be able to trigger the two servos through the toggle switch.
+You should now be able to trigger the two servos by toggling the toggle switch.
+
 
 
 <br>
 
 
-Next, you need to adapt the orientation of the small plastic levers that you attached to the servo gears earlier.
+Next, the levers are mounted to the servos.
+Therefore trigger a closing animation by toggling the switch and once the animation is done, unplug the USB cable, such that the servos remain in their rest position.
+Glue the small plastic levers that come with the servo motors into foreseen perforations of the 3D-printed levers.
+Then attach the levers to the servos:
 Make sure that the lever of the lid servo is oriented horizontally, pointing towards the front of the box, when resting.
 The switch servo lever should be oriented vertically, pointing towards the bottom of the box, when resting.
-If you are happy with the result, glue the 3D-printed levers onto the servo levers, utilizing the foreseen perforation.
-If you now toggle the switch again, the servos should fully open the box, untoggle the switch, and close the box again, as expected.
-If you are happy with the result, you should also fix the 3D-printed levers within the servo motor gears by screwing them in place through the foreseen perforation.
+If you now power on the Arduino board via USB and trigger a animation by toggling the switch, the levers should open the box, untoggle the switch and close the box again.
+If not, then you'd need to adjust the lever position.
+If you are happy with the design, screw the levers onto the servo motors through the foreseen perforations, using the tiny screws that come with the servos.
+
+
+<br>
+
+
+![3_3__box_view__crop.jpg](./images/3_3__box_view__crop.jpg)
 
 
 <br>
 <br>
 
 
-#### Final Steps
+#### 3.4 Final Steps
 
 
 <br>
@@ -245,7 +262,12 @@ WARNING: Don't switch the box on and connect the Arduino Nano to a computer via 
 <br>
 
 
-Under `jfk` in the `useless_box.ino` sketch you can now add your own animations.
+Under `useless profiles` in the `useless_box.ino` sketch you can now add your own animations.
+
+
+<br>
+
+
 If you also have a plushy to spare, cut off its head and arm to give the box a nice appearance.
 
 
