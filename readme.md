@@ -82,17 +82,25 @@ Links:
 
 
 Parts:
-* [sliding switch](https://www.conrad.de/de/p/tru-components-css-1202-schiebeschalter-50-v-dc-0-3-a-1-x-aus-ein-1-st-1569017.html) (0.62€)
+* [three-state power switch](https://www.conrad.de/de/p/tru-components-schiebeschalter-250-v-ac-1-5-a-2-x-ein-ein-ein-1-st-1564872.html) (0.55€)
 * [toggle switch](https://www.conrad.de/de/p/tru-components-tc-r13-2-05-kippschalter-250-v-ac-1-5-a-1-x-aus-ein-rastend-1-st-1587664.html) (1.13€)
+* [breadboard for Arduino Nano board](https://www.conrad.de/de/p/tru-components-schiebeschalter-250-v-ac-1-5-a-2-x-ein-ein-ein-1-st-1564872.html) (4.28€)
+* [SG90 servo motor (with sufficient torque)](https://www.conrad.de/de/p/makerfactory-mf-6402123-motor-2134041.html) (2x3.55€)
+* [Arduino Nano board](https://www.conrad.de/de/p/tru-components-schiebeschalter-250-v-ac-1-5-a-2-x-ein-ein-ein-1-st-1564872.html) (4.23€)
+* [jumper wires](https://www.conrad.de/de/p/tru-components-schiebeschalter-250-v-ac-1-5-a-2-x-ein-ein-ein-1-st-1564872.html)(2.10€)
+* [18650 3500mAh 3.7V Li-Ion battery](https://www.conrad.de/de/p/tru-components-schiebeschalter-250-v-ac-1-5-a-2-x-ein-ein-ein-1-st-1564872.html) (3.26€)
+* [18650 Li-Ion charging board and USB cable](https://www.conrad.de/de/p/tru-components-schiebeschalter-250-v-ac-1-5-a-2-x-ein-ein-ein-1-st-1564872.html) (2.70€)
+
+
+<br>
+
+
+Further Parts (not required)
 * [compartment for four AA batteries](https://www.conrad.de/de/p/tru-components-sbh341-1a-batteriehalter-4x-mignon-aa-kabel-1672572.html) (1.67€)
-* [SG90 servo motor (1.8 kg*cm @6V)](https://www.conrad.de/de/p/makerfactory-mf-6402123-motor-2134041.html) (3.55€)
 * [SG5010 servo motor (6.5 kg*cm @6V, wrong image in Conrad webshop)](https://www.conrad.de/de/p/adafruit-155-servomotor-1516599.html) (15.99€)
 * [ATMEGA328P microcontroller](https://www.conrad.de/de/p/microchip-technology-atmega328p-pu-embedded-mikrocontroller-pdip-28-8-bit-20-mhz-anzahl-i-o-23-155197.html) (2.16€)
 * [16MHz quartz resonator](https://www.conrad.de/de/p/euroquartz-quarzkristall-quarz-hc49-us-hc49-4h-16-000-mhz-18-pf-l-x-b-x-h-3-68-x-10-26-x-3-5-mm-1-st-155145.html) (0.54€)
 * [2x 22pF capacitors](https://www.conrad.de/de/p/tru-components-tc-k22pf500v-keramik-kondensator-tht-22-pf-500-v-5-1-st-1589526.html) (2x 0.075€)
-* set of 3D-printed components: box, lid, lever (`.ipt`, `.stp` and `.stl` files in this repository)
-
-Neglecting the costs for the 3D-print the items above add up to 24.71€
 
 
 <br>
